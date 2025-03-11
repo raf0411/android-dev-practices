@@ -1,5 +1,8 @@
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import io.getstream.chat.android.ai.assistant.TypingState
+import io.getstream.chat.android.ai.assistant.TypingState.Companion.toTypingState
 import io.getstream.chat.android.client.ChatClient
 import io.getstream.chat.android.client.events.AIIndicatorClearEvent
 import io.getstream.chat.android.client.events.AIIndicatorStopEvent

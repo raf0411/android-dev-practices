@@ -3,7 +3,6 @@ package kalbe.corp.aichatbottutorial
 import MessageViewModel
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -12,12 +11,12 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import io.getstream.chat.android.ai.assistant.AiMessagesScreen
 import io.getstream.chat.android.compose.ui.theme.ChatTheme
 import io.getstream.chat.android.compose.viewmodel.messages.MessagesViewModelFactory
-import java.nio.file.WatchEvent.Modifier
+import androidx.compose.ui.Modifier
 
 class MessageActivity : ComponentActivity() {
-
     private val cid by lazy { intent.getStringExtra(KEY_CHANNEL_ID)!! }
     private val messageViewModel: MessageViewModel by viewModels()
 
@@ -59,5 +58,4 @@ class MessageActivity : ComponentActivity() {
             }
         }
     }
-}
 }

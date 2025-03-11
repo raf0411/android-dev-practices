@@ -19,9 +19,9 @@ class MainViewModel : ViewModel() {
                 memberIds = listOf(chatClient.getCurrentUser()?.id.orEmpty()),
                 extraData = mapOf()
             ).await().onSuccess {
-                Log.d("StreamChat", "Created a new channel") // ✅ FIXED
+                Log.d("StreamChat", "Created a new channel")
             }.onError {
-                Log.e("StreamChat", "Error: $it") // ✅ FIXED
+                Log.e("StreamChat", "Error: $it")
             }
         }
     }
